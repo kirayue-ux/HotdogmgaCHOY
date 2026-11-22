@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Myself - Jacob Briones</title>
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #111827, #1f2937);
+        color: #f3f4f6;
+        padding: 40px 20px;
+    }
+
+    .wrapper {
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    .hero {
+        background: #f59e0b;
+        color: #111827;
+        padding: 42px;
+        border-radius: 24px 24px 8px 8px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,.3);
+    }
+
+    .hero::after {
+        content: "J";
+        position: absolute;
+        right: 30px;
+        top: -35px;
+        font-size: 190px;
+        font-weight: 900;
+        opacity: .10;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 7px 14px;
+        border: 2px solid #111827;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        margin: 18px 0 8px;
+        font-size: 52px;
+        line-height: 1;
+    }
+
+    .subtitle {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .content {
+        display: block;
+        margin-top: 22px;
+    }
+
+    .card {
+        background: #f9fafb;
+        color: #1f2937;
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 12px 28px rgba(0,0,0,.22);
+    }
+
+    .card h2 {
+        margin: 0 0 18px;
+        color: #b45309;
+        font-size: 25px;
+    }
+
+    .about p {
+        line-height: 1.8;
+        margin: 0 0 16px;
+    }
+
+    .info {
+        display: grid;
+        gap: 12px;
+    }
+
+    .info-row {
+        padding: 13px 15px;
+        background: #f3f4f6;
+        border-left: 4px solid #f59e0b;
+        border-radius: 8px;
+    }
+
+    .label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #6b7280;
+        margin-bottom: 3px;
+        font-weight: bold;
+    }
+
+    .value {
+        font-weight: bold;
+        word-break: break-word;
+    }
+
+    .motto {
+        margin-top: 22px;
+        background: #111827;
+        color: #fff;
+        border-radius: 16px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .motto small {
+        display: block;
+        color: #f59e0b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .motto strong {
+        font-size: 24px;
+    }
+
+    .hobbies {
+        margin-top: 22px;
+    }
+
+    .hobby-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hobby {
+        background: #111827;
+        color: #fbbf24;
+        padding: 10px 15px;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 24px;
+        color: #9ca3af;
+        font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+        body { padding: 20px 14px; }
+        h1 { font-size: 38px; }
+
+        .hero { padding: 30px 24px; }
+    }
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <header class="hero">
+        <span class="tag">EXE 3 • PERSONAL PROFILE</span>
+        <h1>About Myself</h1>
+        <p class="subtitle">Jacob C. Briones</p>
+    </header>
+
+    <main class="content">
+
+        <section class="card about">
+            <h2>Who I Am</h2>
+            <p>
+                Hi! I am Jacob C. Briones, a simple and friendly person who enjoys
+                spending time with friends and family. I like having conversations,
+                sharing stories, and enjoying fun moments with the people around me.
+            </p>
+            <p>
+                During my free time, I enjoy different activities that help me relax
+                and have fun. I also like learning new things and improving myself
+                through different experiences.
+            </p>
+            <p>
+                I believe that every day is an opportunity to learn something useful,
+                enjoy the moment, and become a better version of myself.
+            </p>
+
+            <div class="hobbies">
+                <h2>My Interests</h2>
+                <div class="hobby-list">
+                    <span class="hobby">Technology</span>
+                    <span class="hobby">Video Games</span>
+                    <span class="hobby">Music</span>
+                    <span class="hobby">Movies</span>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>Created by Jacob C. Briones</footer>
+</div>
+</body>
+</html>

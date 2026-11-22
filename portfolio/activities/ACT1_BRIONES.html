@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob Briones | About Myself</title>
+
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f1ea;
+        color: #252525;
+    }
+
+    .top {
+        background: #1f2933;
+        color: white;
+        padding: 55px 22px;
+        text-align: center;
+    }
+
+    .top .tag {
+        display: inline-block;
+        padding: 7px 15px;
+        border: 1px solid #f4c95d;
+        border-radius: 30px;
+        color: #f4c95d;
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .top h1 {
+        margin: 18px 0 8px;
+        font-size: clamp(40px, 8vw, 68px);
+        letter-spacing: -2px;
+    }
+
+    .top p {
+        margin: 0;
+        color: #d7dde3;
+        font-size: 17px;
+    }
+
+    .layout {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 45px 20px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 25px;
+    }
+
+    .box {
+        background: white;
+        border: 1px solid #ddd8ce;
+        border-radius: 12px;
+        padding: 28px;
+        box-shadow: 0 8px 20px rgba(31,41,51,.07);
+    }
+
+    .about {
+        grid-row: span 2;
+    }
+
+    .label {
+        color: #b07b18;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 0 0 18px;
+        font-size: 28px;
+        color: #1f2933;
+    }
+
+    .about p {
+        font-size: 17px;
+        line-height: 1.9;
+        margin: 0;
+        text-align: left;
+    }
+
+    .details {
+        display: grid;
+        gap: 0;
+    }
+
+    .detail {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 13px 0;
+        border-bottom: 1px solid #e9e5dd;
+        font-size: 15px;
+    }
+
+    .detail:last-child {
+        border-bottom: none;
+    }
+
+    .detail strong {
+        color: #6b7280;
+    }
+
+    .detail span {
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .motto {
+        font-size: 22px;
+        line-height: 1.5;
+        color: #1f2933;
+        padding: 20px;
+        background: #fff7df;
+        border-left: 5px solid #f4c95d;
+        border-radius: 7px;
+    }
+
+    .motto small {
+        display: block;
+        margin-top: 12px;
+        color: #8a6a22;
+        font-size: 13px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #1f2933;
+        color: #aeb7c1;
+        font-size: 14px;
+    }
+
+    footer b {
+        color: #f4c95d;
+    }
+
+    @media (max-width: 760px) {
+        .layout {
+            grid-template-columns: 1fr;
+        }
+
+        .about {
+            grid-row: auto;
+        }
+
+        .detail {
+            align-items: flex-start;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header class="top">
+    <div class="tag">Personal Profile</div>
+    <h1>Jacob Briones</h1>
+    <p>A little introduction about me, my interests, and my goals.</p>
+</header>
+
+<main class="layout">
+
+    <section class="box about">
+        <div class="label">01 — Introduction</div>
+        <h2>About Myself</h2>
+
+        <p>
+            My name is Jacob Briones. I am a student who is interested in learning new things,
+            especially about computers and technology. I consider myself a hardworking and
+            responsible person, although I still have many things that I need to improve about
+            myself. During my free time, I like playing video games, reading sometimes, and
+            spending time with my family and friends. I also enjoy learning new skills because
+            I believe that every experience can teach me something useful. My goal in the future
+            is to finish my studies and have a good career related to technology. I want to
+            continue improving myself and hopefully use what I learn to help other people and
+            achieve my goals.
+        </p>
+    </section>
+
+    <section class="box">
+        <div class="label">02 — Details</div>
+        <h2>Personal Info</h2>
+
+        <div class="details">
+            <div class="detail"><strong>Name</strong><span>Jacob Briones</span></div>
+            <div class="detail"><strong>Age</strong><span>19 years old</span></div>
+            <div class="detail"><strong>Address</strong><span>Paknaani, Mandaue City</span></div>
+            <div class="detail"><strong>Gender</strong><span>Male</span></div>
+            <div class="detail"><strong>Birthdate</strong><span>July 26, 2007</span></div>
+        </div>
+    </section>
+
+    <section class="box">
+        <div class="label">03 — Motto</div>
+        <h2>My Personal Motto</h2>
+
+        <div class="motto">
+            “An inch of gold cannot buy an inch of time.”
+            <small>— A reminder to value every moment.</small>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Created by <b>Jacob Briones</b>
+</footer>
+
+</body>
+</html>

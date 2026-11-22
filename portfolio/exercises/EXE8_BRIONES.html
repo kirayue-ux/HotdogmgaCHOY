@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Sakura World 🌸</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 50px 20px;
+            font-family: Georgia, serif;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(255, 220, 235, 0.45),
+                                rgba(255, 240, 246, 0.55)),
+                url("https://i.pinimg.com/736x/24/9d/e3/249de332cd672de28548596e406d8723.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            overflow-x: hidden;
+        }
+
+        /* FLOATING SAKURA PETALS */
+        .petal {
+            position: fixed;
+            top: -50px;
+            font-size: 25px;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        .p1 {
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .p2 {
+            left: 30%;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+        .p3 {
+            left: 55%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+
+        .p4 {
+            left: 75%;
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+
+        .p5 {
+            left: 90%;
+            animation-duration: 8s;
+            animation-delay: 4s;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* MAIN CARD */
+        .container {
+            display: flex;
+            align-items: center;
+            max-width: 950px;
+            margin: 70px auto;
+
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(10px);
+
+            border: 3px solid #f3a9c2;
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(180, 80, 120, 0.25);
+
+            animation: appear 1.5s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* IMAGE */
+        .picture {
+            width: 40%;
+            padding: 20px;
+            background: rgba(255, 210, 225, 0.7);
+        }
+
+        .picture img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 4px solid white;
+
+            box-shadow: 0 8px 20px rgba(180, 80, 120, 0.25);
+
+            transition: 0.5s;
+        }
+
+        .picture img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* CONTENT */
+        .content {
+            width: 60%;
+            padding: 35px;
+        }
+
+        /* TITLE */
+        .jump {
+            color: #c94f7c;
+            font-size: 42px;
+            margin-top: 0;
+
+            text-shadow:
+                0 0 5px #ffb6ce,
+                0 0 15px #ffb6ce;
+
+            animation: jump 1.2s infinite;
+        }
+
+        @keyframes jump {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* SMALL DECORATION */
+        .line {
+            width: 100px;
+            height: 4px;
+            background: #e88aaa;
+            margin: -10px auto 25px;
+            border-radius: 10px;
+        }
+
+        /* TEXT */
+        p {
+            color: #604751;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* QUOTE */
+        .quote {
+            margin-top: 30px;
+            padding: 15px;
+
+            color: #c94f7c;
+            font-size: 20px;
+
+            font-style: italic;
+            text-align: center;
+
+            border-top: 2px solid #f3b6c8;
+            border-bottom: 2px solid #f3b6c8;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+
+            background: #d96f98;
+            color: white;
+
+            border-radius: 30px;
+            text-decoration: none;
+
+            transition: 0.3s;
+
+            box-shadow: 0 5px 15px rgba(200, 80, 120, 0.3);
+        }
+
+        .button:hover {
+            background: #c94f7c;
+            transform: translateY(-4px);
+        }
+
+        /* MOBILE DESIGN */
+        @media (max-width: 700px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .container {
+                flex-direction: column;
+                margin: 30px auto;
+            }
+
+            .picture,
+            .content {
+                width: 100%;
+            }
+
+            .picture img {
+                height: 280px;
+            }
+
+            .jump {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FALLING SAKURA -->
+    <div class="petal p1">🌸</div>
+    <div class="petal p2">🌸</div>
+    <div class="petal p3">🌸</div>
+    <div class="petal p4">🌸</div>
+    <div class="petal p5">🌸</div>
+
+    <!-- MAIN CARD -->
+    <div class="container">
+
+        <div class="picture">
+
+            <img
+                src="https://i.pinimg.com/originals/04/d3/f5/04d3f50d99f3738103a986a7e05a2824.jpg"
+                alt="Beautiful Cherry Blossom"
+            >
+
+        </div>
+
+        <div class="content">
+
+            <h1 class="jump">🌸 Cherry Blossom</h1>
+
+            <div class="line"></div>
+
+            <p>
+                Cherry blossom is a beautiful flower known for its
+                soft pink and white petals. It represents beauty,
+                hope, and new beginnings.
+            </p>
+
+            <p>
+                In Japan, cherry blossoms are called
+                <b>Sakura</b>. Their short blooming season reminds
+                people to appreciate beautiful moments because
+                nothing lasts forever.
+            </p>
+
+            <p class="quote">
+                “Under Sakura skies so bright, 🌸<br>
+Soft petals dance in morning light.<br>
+Each little bloom, a dream anew,<br>
+A gentle reminder to bloom too.” 🌸
+            </p>
+
+            <a href="#" class="button">
+                🌸 Keep Blooming
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

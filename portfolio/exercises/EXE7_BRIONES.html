@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Cherry Blossoms</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 50px 20px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            background: linear-gradient(135deg, #fffafc, #f1f4ff);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           MAIN TITLE
+        ========================= */
+
+        h1 {
+            color: #4d527c;
+
+            font-family:
+                "Brush Script MT",
+                "Lucida Handwriting",
+                cursive;
+
+            font-size: 52px;
+
+            margin: 10px 0 15px;
+
+            text-shadow: none;
+        }
+
+
+        /* =========================
+           JUMPING LETTERS
+        ========================= */
+
+        .jump {
+            display: inline-block;
+
+            animation:
+                jumping 0.8s ease-in-out infinite;
+        }
+
+
+        @keyframes jumping {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================
+           SUBTITLE
+        ========================= */
+
+        h2 {
+            color: #9b5573;
+
+            font-size: 32px;
+
+            margin-top: 10px;
+        }
+
+
+        h3 {
+            color: #8589a5;
+
+            font-family:
+                "Brush Script MT",
+                cursive;
+
+            font-size: 27px;
+
+            margin-top: -10px;
+        }
+
+
+        /* =========================
+           LINE
+        ========================= */
+
+        hr {
+            width: 70%;
+
+            border: 0;
+
+            border-top: 2px solid #d9dbea;
+
+            margin: 25px auto;
+
+            box-shadow: none;
+        }
+
+
+        /* =========================
+           POEM BOX
+        ========================= */
+
+        .poem {
+            max-width: 720px;
+
+            margin: 30px auto;
+
+            padding: 30px;
+
+            background: rgba(255,255,255,.94);
+
+            border-radius: 18px;
+
+            font-size: 22px;
+
+            line-height: 1.8;
+
+            box-shadow: 0 8px 22px rgba(60,60,90,.10);
+
+            border:
+                2px solid
+                rgba(255, 255, 255, 0.8);
+
+            backdrop-filter: none;
+
+            transition: 0.3s;
+        }
+
+
+        /* HOVER EFFECT */
+
+        .poem:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(180, 80, 130, 0.35);
+        }
+
+
+        /* =========================
+           STANZA COLORS
+        ========================= */
+
+        .stanza1 {
+            color: #4d527c;
+
+            border-left: 6px solid #d98bad;
+        }
+
+
+        .stanza2 {
+            color: #808000;
+
+            border-right: 6px solid #a4b394;
+        }
+
+
+        .stanza3 {
+            color: #800080;
+
+            border-left: 6px solid #a997bc;
+        }
+
+
+        /* =========================
+           PICTURE ROW
+        ========================= */
+
+        .gallery {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin: 25px auto;
+        }
+
+
+        /* 50px × 50px */
+
+        .gallery img {
+            width: 110px;
+
+            height: 75px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            border: 2px solid white;
+
+            box-shadow:
+                0 3px 8px
+                rgba(0, 0, 0, 0.3);
+
+            transition: 0.3s;
+        }
+
+
+        .gallery img:hover {
+            transform:
+                scale(1.2)
+                rotate(5deg);
+        }
+
+
+        /* =========================
+           FAVORITE LINE
+        ========================= */
+
+        .favorite {
+            color: #9b557b;
+
+            font-size: 25px;
+
+            border: 2px dashed #d59ab7;
+
+            background: #fff7fb;
+        }
+
+
+        /* =========================
+           DECORATION
+        ========================= */
+
+        .decor {
+            font-size: 30px;
+
+            letter-spacing: 8px;
+
+            margin: 10px;
+        }
+
+
+        /* =========================
+           FALLING PETALS
+        ========================= */
+
+        .petal {
+            position: fixed;
+
+            top: -50px;
+
+            font-size: 25px;
+
+            animation:
+                fall linear infinite;
+
+            pointer-events: none;
+
+            z-index: 10;
+        }
+
+
+        @keyframes fall {
+
+            0% {
+                transform:
+                    translateY(-50px)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        /* PETAL POSITIONS */
+
+        .petal:nth-child(1) {
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+
+        .petal:nth-child(2) {
+            left: 25%;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+
+        .petal:nth-child(3) {
+            left: 45%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+
+        .petal:nth-child(4) {
+            left: 65%;
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+
+
+        .petal:nth-child(5) {
+            left: 80%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
+
+
+        .petal:nth-child(6) {
+            left: 95%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+
+        /* =========================
+           MOBILE VERSION
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 30px 10px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 23px;
+            }
+
+            .poem {
+                font-size: 18px;
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FALLING CHERRY BLOSSOMS
+    ========================= -->
+
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+    <div class="petal">🌸</div>
+
+
+    <!-- =========================
+         TOP DECORATION
+    ========================= -->
+
+    <div class="decor">
+        🌸 ✿ 🌸
+    </div>
+
+
+    <!-- =========================
+         MAIN TITLE
+    ========================= -->
+
+    <h1 id="title">
+        Cherry Blossoms
+    </h1>
+
+
+    <h2>
+        The Beauty of Sakura
+    </h2>
+
+
+    <h3>
+        A Story Written in Pink
+    </h3>
+
+
+    <hr>
+
+
+    <!-- =========================
+         STANZA 1
+    ========================= -->
+
+    <div class="poem stanza1">
+
+        <i>
+
+            Soft petals dance upon the breeze,<br>
+
+            Whispering gently through the trees,<br>
+
+            Pink blossoms shine beneath the sun,<br>
+
+            Reminding us that spring has begun.
+
+        </i>
+
+    </div>
+
+
+    <!-- PICTURES AFTER STANZA 1 -->
+
+    <div class="gallery">
+
+        <img
+            src="https://i.pinimg.com/736x/eb/15/cf/eb15cfa3cdba776b4fb6de1937498553.jpg"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/originals/04/d3/f5/04d3f50d99f3738103a986a7e05a2824.jpg"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/1200x/94/b0/7f/94b07fac118cdaa32228f749282be6a4.jpg"
+            alt="Cherry Blossom">
+
+    </div>
+
+
+    <!-- =========================
+         STANZA 2
+    ========================= -->
+
+    <div class="poem stanza2">
+
+        <i>
+
+            They bloom so softly, then they fall,<br>
+
+            Like little dreams that touch us all,<br>
+
+            Their beauty fades but leaves a glow,<br>
+
+            A precious memory we can know.
+
+        </i>
+
+    </div>
+
+
+    <!-- PICTURES AFTER STANZA 2 -->
+
+    <div class="gallery">
+
+        <img
+            src="https://i.pinimg.com/474x/3e/01/b0/3e01b0a17a1535e2e8ba076920051d76.jpg?nii=t"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/736x/e3/8d/36/e38d3669a260fbd562ab19d504dcba40.jpg"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/736x/e4/fb/d4/e4fbd4d20a0c7a171ae19053f9bd3047.jpg"
+            alt="Cherry Blossom">
+
+    </div>
+
+
+    <!-- =========================
+         STANZA 3
+    ========================= -->
+
+    <div class="poem stanza3">
+
+        <i>
+
+            So let the cherry blossoms be,<br>
+
+            A symbol of hope and harmony,<br>
+
+            For though their season may be brief,<br>
+
+            They bring the heart a quiet peace.
+
+        </i>
+
+    </div>
+
+
+    <!-- PICTURES AFTER STANZA 3 -->
+
+    <div class="gallery">
+
+        <img
+            src="https://pbs.twimg.com/media/HQ63KasWoAAbQM1?format=webp&name=medium"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/736x/eb/15/cf/eb15cfa3cdba776b4fb6de1937498553.jpg"
+            alt="Cherry Blossom">
+
+        <img
+            src="https://i.pinimg.com/originals/04/d3/f5/04d3f50d99f3738103a986a7e05a2824.jpg"
+            alt="Cherry Blossom">
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================
+         FAVORITE LINE
+    ========================= -->
+
+    <div class="poem favorite">
+
+        <b>
+            "Their beauty fades but leaves a glow."
+        </b>
+
+    </div>
+
+
+    <!-- BOTTOM DECORATION -->
+
+    <div class="decor">
+        🌸 ✿ 🌸
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script>
+
+        /* =========================
+           MAKE TITLE JUMP
+        ========================= */
+
+        var title =
+            document.getElementById("title");
+
+        var text =
+            title.innerText.trim();
+
+        title.innerHTML = "";
+
+
+        for (
+            var i = 0;
+            i < text.length;
+            i++
+        ) {
+
+            var letter =
+                document.createElement("span");
+
+            letter.innerText =
+                text[i];
+
+            letter.className =
+                "jump";
+
+            letter.style.animationDelay =
+                (i * 0.08) + "s";
+
+            title.appendChild(letter);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

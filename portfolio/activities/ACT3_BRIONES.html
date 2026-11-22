@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Briones | Philippine Travel Spots</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #101820;
+            color: #ffffff;
+        }
+
+        .hero {
+            min-height: 330px;
+            padding: 70px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(16, 24, 32, .72), rgba(16, 24, 32, .88)),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(38px, 7vw, 70px);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            margin: 15px 0 0;
+            font-size: 19px;
+            color: #ffd166;
+        }
+
+        .name {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 9px 18px;
+            border: 1px solid #ffd166;
+            border-radius: 30px;
+            font-size: 15px;
+        }
+
+        main {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 45px 20px 55px;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            text-align: center;
+            color: #cbd5df;
+            line-height: 1.7;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .place {
+            position: relative;
+            min-height: 280px;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #1b2733;
+            box-shadow: 0 12px 25px rgba(0,0,0,.28);
+        }
+
+        .place img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            display: block;
+            object-fit: cover;
+            transition: transform .45s ease;
+        }
+
+        .place:hover img {
+            transform: scale(1.08);
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 28px 18px 18px;
+            background: linear-gradient(transparent, rgba(0,0,0,.88));
+        }
+
+        .caption h2 {
+            margin: 0 0 5px;
+            font-size: 23px;
+        }
+
+        .caption span {
+            color: #ffd166;
+            font-size: 14px;
+        }
+
+        .place:nth-child(2),
+        .place:nth-child(5) {
+            transform: translateY(28px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 28px 20px;
+            border-top: 1px solid #263746;
+            color: #9eacb8;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: #ffd166;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .place:nth-child(2),
+            .place:nth-child(5) {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .place:nth-child(2),
+            .place:nth-child(5) {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Philippine Escape</h1>
+            <p>A collection of places I would love to explore</p>
+            <div class="name">Created by Jacob Briones</div>
+        </div>
+    </header>
+
+    <main>
+        <p class="intro">
+            The Philippines has many beautiful destinations, from quiet islands
+            and clear beaches to cool mountain towns and historic streets.
+            Here are some places I would like to visit someday.
+        </p>
+
+        <section class="gallery">
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Tropical beach">
+                <div class="caption">
+                    <h2>Cebu</h2>
+                    <span>Beaches & island adventures</span>
+                </div>
+            </article>
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Mountain landscape">
+                <div class="caption">
+                    <h2>Baguio</h2>
+                    <span>Cool weather & mountain views</span>
+                </div>
+            </article>
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="Blue ocean">
+                <div class="caption">
+                    <h2>Palawan</h2>
+                    <span>Crystal-clear water & nature</span>
+                </div>
+            </article>
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80" alt="Island beach">
+                <div class="caption">
+                    <h2>Siargao</h2>
+                    <span>Island life & surfing</span>
+                </div>
+            </article>
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mountain scenery">
+                <div class="caption">
+                    <h2>Camiguin</h2>
+                    <span>Mountains, springs & waterfalls</span>
+                </div>
+            </article>
+
+            <article class="place">
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80" alt="Travel landscape">
+                <div class="caption">
+                    <h2>Davao</h2>
+                    <span>Nature & city exploration</span>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <strong>Jacob Briones</strong> | Activity No. 3
+    </footer>
+
+</body>
+</html>

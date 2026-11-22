@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5 - Formatting Tags</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 50px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, #ffe8f3 0, transparent 35%),
+                radial-gradient(circle at bottom right, #e4f0ff 0, transparent 35%),
+                #f7f8fc;
+            color: #292b38;
+        }
+
+        .page {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 3px;
+            color: #343a67;
+        }
+
+        .title p {
+            margin-top: 10px;
+            color: #777b91;
+            font-size: 15px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #e5e7ef;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(55, 60, 90, 0.10);
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 17px 20px;
+            margin: 12px 0;
+            border-radius: 14px;
+            background: #f8f9fc;
+            border-left: 5px solid #7c83d6;
+        }
+
+        .example {
+            font-size: 20px;
+        }
+
+        code {
+            background: #eceefd;
+            color: #555da7;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #8a8da0;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .title h1 {
+                font-size: 30px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .tag {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="title">
+            <h1>HTML Formatting Tags</h1>
+            <p>A simple and clean presentation of common HTML text formatting tags</p>
+        </div>
+
+        <div class="card">
+
+            <div class="tag">
+                <span class="example"><b>Bold</b></span>
+                <code>&lt;b&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><i>Italic</i></span>
+                <code>&lt;i&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><u>Underline</u></span>
+                <code>&lt;u&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><strong>Strong</strong></span>
+                <code>&lt;strong&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><em>Emphasized</em></span>
+                <code>&lt;em&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><mark>Highlighted</mark></span>
+                <code>&lt;mark&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><small>Small Text</small></span>
+                <code>&lt;small&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><del>Deleted Text</del></span>
+                <code>&lt;del&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example"><ins>Inserted Text</ins></span>
+                <code>&lt;ins&gt;</code>
+            </div>
+
+            <div class="tag">
+                <span class="example">H<sub>2</sub>O</span>
+                <code>Subscript</code>
+            </div>
+
+            <div class="tag">
+                <span class="example">X<sup>2</sup></span>
+                <code>Superscript</code>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Exercise 5 • HTML Formatting Tags
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Favorite Quotes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 50px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+            color: #25283d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0 45px;
+            font-size: 42px;
+            letter-spacing: 4px;
+            color: #39436d;
+        }
+
+        .quote {
+            position: relative;
+            padding: 30px 35px;
+            margin: 24px 0;
+            background: white;
+            border-radius: 18px;
+            border: 1px solid #e3e5ef;
+            box-shadow: 0 10px 25px rgba(45, 50, 80, 0.10);
+            font-size: 21px;
+            line-height: 1.7;
+            transition: transform 0.2s ease;
+        }
+
+        .quote:hover {
+            transform: translateY(-4px);
+        }
+
+        .quote::before {
+            content: "“";
+            position: absolute;
+            top: 5px;
+            left: 18px;
+            font-size: 65px;
+            color: #9aa4df;
+            line-height: 1;
+        }
+
+        .quote1 {
+            border-left: 6px solid #7c83d6;
+            text-align: left;
+        }
+
+        .quote2 {
+            border-left: 6px solid #d68bb2;
+            text-align: center;
+        }
+
+        .quote3 {
+            border-left: 6px solid #7fa89b;
+            text-align: right;
+        }
+
+        .author {
+            display: inline-block;
+            margin-top: 8px;
+            color: #646981;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 17px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .quote {
+                padding: 25px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MY FAVORITE QUOTES</h1>
+
+        <div class="quote quote1">
+            "Happiness depends upon ourselves."
+            <br>
+            — <span class="author"><b>Aristotle</b></span>
+        </div>
+
+        <div class="quote quote2">
+            "The future depends on what you do today."
+            <br>
+            — <span class="author"><i>Mahatma Gandhi</i></span>
+        </div>
+
+        <div class="quote quote3">
+            "It always seems impossible until it's done."
+            <br>
+            — <span class="author"><u>Nelson Mandela</u></span>
+        </div>
+    </div>
+</body>
+</html>

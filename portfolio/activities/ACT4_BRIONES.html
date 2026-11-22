@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz - Jacob Briones</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #E3F2FD, #F3E5F5);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #263238;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #1565C0;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 38px;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .quiz-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 18px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+            border-left: 6px solid #1565C0;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            padding: 12px 15px;
+            margin: 8px 0;
+            background-color: #F5F7FA;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        label:hover {
+            background-color: #E3F2FD;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Subtle indicator for the correct answer */
+        .correct-answer {
+            position: relative;
+        }
+
+        .correct-answer::after {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #e57373;
+            border-radius: 50%;
+            margin-left: 7px;
+            vertical-align: middle;
+            opacity: 0.75;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin: 25px 0;
+            border: none;
+            border-radius: 10px;
+            background-color: #1565C0;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0D47A1;
+        }
+
+        #result {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+            margin-top: 20px;
+        }
+
+        #score {
+            color: #1565C0;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>HTML Quiz</h1>
+        <p>Name: <strong>Jacob Briones</strong></p>
+    </div>
+
+    <form id="quizForm">
+
+        <div class="quiz-card">
+            <div class="question">1. What does HTML stand for?</div>
+            <label><input type="radio" name="q1" value="A"> Hyper Trainer Marking Language</label>
+            <label> class="correct-answer"<input type="radio" name="q1" value="B"> Hyper Text Markup Language</label>
+            <label><input type="radio" name="q1" value="C"> High Text Machine Language</label>
+            <label><input type="radio" name="q1" value="D"> Hyper Text Making Language</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">2. Which tag is used to create the largest heading?</div>
+            <label> class="correct-answer"<input type="radio" name="q2" value="A"> &lt;h1&gt;</label>
+            <label><input type="radio" name="q2" value="B"> &lt;h6&gt;</label>
+            <label><input type="radio" name="q2" value="C"> &lt;heading&gt;</label>
+            <label><input type="radio" name="q2" value="D"> &lt;head&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">3. Which tag is used to insert a line break?</div>
+            <label><input type="radio" name="q3" value="A"> &lt;lb&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q3" value="B"> &lt;br&gt;</label>
+            <label><input type="radio" name="q3" value="C"> &lt;break&gt;</label>
+            <label><input type="radio" name="q3" value="D"> &lt;newline&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">4. Which tag is used to create a hyperlink?</div>
+            <label><input type="radio" name="q4" value="A"> &lt;link&gt;</label>
+            <label><input type="radio" name="q4" value="B"> &lt;href&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q4" value="C"> &lt;a&gt;</label>
+            <label><input type="radio" name="q4" value="D"> &lt;url&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">5. Which attribute specifies the URL of a link?</div>
+            <label><input type="radio" name="q5" value="A"> src</label>
+            <label> class="correct-answer"<input type="radio" name="q5" value="B"> href</label>
+            <label><input type="radio" name="q5" value="C"> link</label>
+            <label><input type="radio" name="q5" value="D"> url</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">6. Which tag is used to create an ordered list?</div>
+            <label><input type="radio" name="q6" value="A"> &lt;ul&gt;</label>
+            <label><input type="radio" name="q6" value="B"> &lt;list&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q6" value="C"> &lt;ol&gt;</label>
+            <label><input type="radio" name="q6" value="D"> &lt;dl&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">7. Which attribute is used to insert an image source?</div>
+            <label><input type="radio" name="q7" value="A"> href</label>
+            <label> class="correct-answer"<input type="radio" name="q7" value="B"> src</label>
+            <label><input type="radio" name="q7" value="C"> link</label>
+            <label><input type="radio" name="q7" value="D"> img</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">8. Which tag defines a table row?</div>
+            <label><input type="radio" name="q8" value="A"> &lt;td&gt;</label>
+            <label><input type="radio" name="q8" value="B"> &lt;th&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q8" value="C"> &lt;tr&gt;</label>
+            <label><input type="radio" name="q8" value="D"> &lt;table&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">9. Which tag is used to create an unordered list?</div>
+            <label><input type="radio" name="q9" value="A"> &lt;ol&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q9" value="B"> &lt;ul&gt;</label>
+            <label><input type="radio" name="q9" value="C"> &lt;list&gt;</label>
+            <label><input type="radio" name="q9" value="D"> &lt;li&gt;</label>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question">10. What is the correct HTML element for the smallest heading?</div>
+            <label><input type="radio" name="q10" value="A"> &lt;h1&gt;</label>
+            <label> class="correct-answer"<input type="radio" name="q10" value="B"> &lt;h6&gt;</label>
+            <label><input type="radio" name="q10" value="C"> &lt;heading&gt;</label>
+            <label><input type="radio" name="q10" value="D"> &lt;small&gt;</label>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="checkQuiz()">Submit Quiz</button>
+    </form>
+
+    <div id="result">
+        <h2>Your Result</h2>
+        <p id="score"></p>
+    </div>
+
+</div>
+
+<script>
+function checkQuiz() {
+    const answers = {
+        q1: "B",
+        q2: "A",
+        q3: "B",
+        q4: "C",
+        q5: "B",
+        q6: "C",
+        q7: "B",
+        q8: "C",
+        q9: "B",
+        q10: "B"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+        const selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").style.display = "block";
+    document.getElementById("score").textContent =
+        "Your Score: " + score + " / 10";
+}
+</script>
+
+</body>
+</html>

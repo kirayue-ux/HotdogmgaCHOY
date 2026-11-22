@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Font Tag Attributes - Jacob Briones</title>
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 35px 18px;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    .container {
+        max-width: 980px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        padding: 35px 20px;
+        margin-bottom: 28px;
+        border: 1px solid #334155;
+        border-radius: 22px;
+        background: #111827;
+        box-shadow: 0 15px 35px rgba(0,0,0,.3);
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 7px 14px;
+        border-radius: 20px;
+        background: #f59e0b;
+        color: #111827;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        margin: 18px 0 8px;
+        font-size: 42px;
+    }
+
+    .subtitle {
+        margin: 0;
+        color: #94a3b8;
+    }
+
+    .font-card {
+        background: #f8fafc;
+        color: #1e293b;
+        border-radius: 20px;
+        margin: 20px 0;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        align-items: center;
+        border-left: 7px solid;
+        box-shadow: 0 12px 25px rgba(0,0,0,.22);
+    }
+
+    .hotpink { border-left-color: #ec4899; }
+    .olive { border-left-color: olive; }
+    .purple { border-left-color: #7c3aed; }
+
+    .preview {
+        min-height: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 15px;
+        background: #e2e8f0;
+        text-align: center;
+    }
+
+    .pink-text {
+        font-family: "Times New Roman", serif;
+        font-size: 32px;
+        color: hotpink;
+    }
+
+    .olive-text {
+        font-family: Arial, sans-serif;
+        font-size: 38px;
+        color: olive;
+    }
+
+    .purple-text {
+        font-family: Georgia, serif;
+        font-size: 44px;
+        color: purple;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .details {
+        display: grid;
+        gap: 10px;
+    }
+
+    .detail {
+        background: #e2e8f0;
+        padding: 11px 14px;
+        border-radius: 9px;
+    }
+
+    .detail b {
+        display: inline-block;
+        width: 75px;
+    }
+
+    footer {
+        text-align: center;
+        color: #64748b;
+        margin-top: 28px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+        .font-card { grid-template-columns: 1fr; }
+        h1 { font-size: 32px; }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <span class="badge">EXE 4 • HTML ACTIVITY</span>
+        <h1>Font Tag Attributes</h1>
+        <p class="subtitle">Prepared by Jacob C. Briones</p>
+    </header>
+
+    <section class="font-card hotpink">
+        <div class="preview">
+            <span class="pink-text">This is Hot Pink Font</span>
+        </div>
+        <div>
+            <h2>Hot Pink Font</h2>
+            <div class="details">
+                <div class="detail"><b>FACE:</b> Times New Roman</div>
+                <div class="detail"><b>COLOR:</b> Hot Pink</div>
+                <div class="detail"><b>SIZE:</b> 4</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="font-card olive">
+        <div class="preview">
+            <span class="olive-text">This is Olive Font</span>
+        </div>
+        <div>
+            <h2>Olive Font</h2>
+            <div class="details">
+                <div class="detail"><b>FACE:</b> Arial</div>
+                <div class="detail"><b>COLOR:</b> Olive</div>
+                <div class="detail"><b>SIZE:</b> 5</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="font-card purple">
+        <div class="preview">
+            <span class="purple-text">This is Purple Font</span>
+        </div>
+        <div>
+            <h2>Purple Font</h2>
+            <div class="details">
+                <div class="detail"><b>FACE:</b> Georgia</div>
+                <div class="detail"><b>COLOR:</b> Purple</div>
+                <div class="detail"><b>SIZE:</b> 6</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>Created by Jacob C. Briones</footer>
+
+</div>
+</body>
+</html>

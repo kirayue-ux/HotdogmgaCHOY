@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BRIONES | List Tags</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Georgia, "Times New Roman", serif;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,.12) 0 2px, transparent 3px),
+                radial-gradient(circle at 80% 15%, rgba(255,255,255,.10) 0 2px, transparent 3px),
+                linear-gradient(135deg, #101b2d, #1b2f46 45%, #0d1726);
+            color: #eef4f7;
+            padding: 45px 18px;
+        }
+
+        .box {
+            width: 720px;
+            max-width: 94%;
+            margin: auto;
+            padding: 42px;
+            background: rgba(16, 27, 45, .94);
+            border: 1px solid rgba(214, 190, 124, .55);
+            border-radius: 28px;
+            box-shadow: 0 18px 55px rgba(0,0,0,.45);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background: rgba(214,190,124,.08);
+            top: -85px;
+            right: -70px;
+        }
+
+        .tag {
+            text-align: center;
+            letter-spacing: 5px;
+            color: #d6be7c;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fffaf0;
+            font-size: 42px;
+            margin: 10px 0 8px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #aebdca;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .poem {
+            background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+            border-left: 4px solid #d6be7c;
+            padding: 24px 26px;
+            border-radius: 0 18px 18px 0;
+            line-height: 1.8;
+            color: #e8edf1;
+            font-size: 17px;
+            margin-bottom: 32px;
+        }
+
+        .poem-title {
+            color: #d6be7c;
+            font-size: 22px;
+            margin: 0 0 14px;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-top: 25px;
+            padding: 22px 24px;
+            background: rgba(255,255,255,.045);
+            border: 1px solid rgba(174,189,202,.18);
+            border-radius: 18px;
+        }
+
+        h2 {
+            color: #f4dfaa;
+            font-size: 19px;
+            margin: 0 0 12px;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        li {
+            font-size: 17px;
+            margin: 9px 0;
+            color: #dfe7ec;
+        }
+
+        .lowercase li::marker {
+            color: #d6be7c;
+            font-weight: bold;
+        }
+
+        .roman li::marker {
+            color: #9cc2d6;
+            font-weight: bold;
+        }
+
+        .lowerroman li::marker {
+            color: #b8a6d9;
+            font-weight: bold;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 34px;
+            color: #d6be7c;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(214,190,124,.35);
+            color: #8fa1af;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .sparkles {
+            text-align: center;
+            color: #d6be7c;
+            font-size: 20px;
+            letter-spacing: 8px;
+            margin: 5px 0 22px;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .poem {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="tag">HTML • LIST TAGS • ACTIVITY</div>
+        <h1>BRIONES</h1>
+        <div class="subtitle">A little piece of code, written in our own style.</div>
+
+        <div class="sparkles">✦ ✧ ✦</div>
+
+        <div class="poem">
+            <div class="poem-title">Where We Begin</div>
+
+            We start with simple lines,<br>
+            but every line can tell a story.<br>
+            A small idea becomes a page,<br>
+            and a page becomes something we can call ours.<br><br>
+
+            Through quiet nights and busy days,<br>
+            we learn, we build, we try again.<br>
+            Not every step has to be perfect—<br>
+            it only has to move us forward.<br><br>
+
+            So here is our little work,<br>
+            made with patience, creativity, and care.<br>
+            A simple list today,<br>
+            a bigger dream tomorrow.
+        </div>
+
+        <div class="section">
+            <h2>Lowercase Letters</h2>
+            <ol type="a" class="lowercase">
+                <li>Dream</li>
+                <li>Create</li>
+                <li>Learn</li>
+                <li>Grow</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Roman Numbers</h2>
+            <ol type="I" class="roman">
+                <li>Imagine</li>
+                <li>Design</li>
+                <li>Build</li>
+                <li>Improve</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Lowercase Roman Numbers</h2>
+            <ol type="i" class="lowerroman">
+                <li>Begin</li>
+                <li>Explore</li>
+                <li>Discover</li>
+                <li>Achieve</li>
+            </ol>
+        </div>
+
+        <div class="signature">“Small steps can become something beautiful.”</div>
+
+        <div class="footer">Created by BRIONES ✦ Keep learning, keep creating.</div>
+
+    </div>
+</body>
+</html>
